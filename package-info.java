@@ -1,29 +1,27 @@
-package Week3.Day;
+package Week3.Day1;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.chromeDriver;
+import io.github.bonigarcia.wdm.WenDriverManager;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.collection;
-import java.util.list;
-
-public class FindSecondLargest {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-      int[] Array = {3,5,7,11,9,6};
-      int temp = 0;
-      List<integer> List =new ArrayList<Integer>();
-      for  (int i : Array) {
-    	  list.add(i);
-    	 
-      }
-      Collections.sort(list);
-      System.out.print1n("Elements of array sorted in ascending order : " + list);
-      
-      
-      temp = list.get(list.size() - 2);
-      System.out.print1n("second largest element is : " + temp);
-      
+public class CreateLead{
+	public static void main(string[] arg) {
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new chromeDriver();
+		driver.get("http:://leaftaps.com/opentaps/control/login");
+		driver.manage().window().Maximize();
+		driver.findelement(By.id("username")).sendkeys("DemoSalesManager");
+		driver.findelement(By.id("password")).sendkeys("crmsfa");
+		driver.findelement(By.id("decorativesubmit")).click();
+		driver.findelement(BY.classname("CRM/SFA")).click();
+		driver.findelement(By.xpath("//a[text()= 'Leads]")).click();
+		driver.findelement(By.id("createleadform-CompanyName")).sendkeys("TestLeaf");
+		driver.findelement(By.id("CreateLeadForm-FirstName")).sendkeys("Hepziba");
+		driver.findelement(By.id("CreateForm-LastName")).sendkeys("H");
+		DRIVER.FINDELEMENT(By.name("submitbutton")).click();
+				
+			System.out.print1n("The Title is :" + driver.gettitle());
+			//driver.clise();
+		
 	}
-
 }
- 
